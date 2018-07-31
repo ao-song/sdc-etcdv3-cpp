@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Service
+{
+    string ServiceName = 1;
+    string Address = 2;
+    message Property
+    {
+        map<string, string> Property = 1;
+    }
+    repeated Property Properties = 3;
+}
