@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 protoc --cpp_out=./src/ ./auth.proto
 protoc --cpp_out=./src/ ./kv.proto
