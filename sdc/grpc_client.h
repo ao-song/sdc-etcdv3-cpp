@@ -38,16 +38,16 @@ namespace sdc
         std::unique_ptr<etcdserverpb::KV::Stub> m_stub;
         int64_t m_lease;
     };
-}
 
-inline void GrpcClient::set_lease(int64_t lease)
-{
-    GrpcClient::m_lease = lease;
-}
+    inline void GrpcClient::set_lease(int64_t lease)
+    {
+        GrpcClient::m_lease = lease;
+    }
 
-inline void GrpcClient::clear_lease()
-{
-    GrpcClient::m_lease = 0;
+    inline void GrpcClient::clear_lease()
+    {
+        GrpcClient::m_lease = 0;
+    }
 }
 
 #endif
