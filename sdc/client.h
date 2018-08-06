@@ -1,6 +1,8 @@
 #ifndef __SDC_CLIENT_H__
 #define __SDC_CLIENT_H__
 
+#include <string>
+
 namespace sdc
 {
     template <class Service>
@@ -12,8 +14,8 @@ namespace sdc
             // Empty
         };
 
-        virtual void Put(Service& sv) = 0;
-        virtual void Get(Service& sv) = 0;
+        virtual bool Put(Service& sv) = 0;
+        virtual std::string Get(Service& sv) = 0;
         virtual void Watch(Service& sv) = 0;
     };
 }

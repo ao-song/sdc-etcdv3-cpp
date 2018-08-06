@@ -25,14 +25,29 @@ namespace sdc
         explicit GrpcClient(std::string addr);
         ~GrpcClient();
 
-        void Put(sdc::Service& kv) override;
-        void Get(sdc::Service& kv) override;
-        void Watch(sdc::Service& kv) override;
+        bool Put(sdc::Service& service) override;
+        std::string Get(sdc::Service& service) override;
+        void Watch(sdc::Service& service) override;
+
+        void set_lease(int64_t lease);
+        void clear_lease();
 
         private:
         std::string m_address;
         std::shared_ptr<Channel> m_channel;
+        std::unique_ptr<etcdserverpb::KV::Stub> m_stub;
+        int64_t m_lease;
     };
+}
+
+inline void GrpcClient::set_lease(int64_t lease)
+{
+    GrpcClient::m_lease = lease;
+}
+
+inline void GrpcClient::clear_lease()
+{
+    GrpcClient::m_lease = 0;
 }
 
 #endif
