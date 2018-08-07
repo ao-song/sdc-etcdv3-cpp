@@ -2,6 +2,7 @@
 #define __SDC_CLIENT_H__
 
 #include <string>
+#include <vector>
 
 namespace sdc
 {
@@ -15,7 +16,7 @@ namespace sdc
         };
 
         virtual bool Put(Service& sv) = 0;
-        virtual std::string Get(Service& sv) = 0;
+        virtual std::vector<Service>& Get(Service& sv) = 0;
         virtual void Watch(Service& sv) = 0;
     };
 }
