@@ -34,7 +34,7 @@ bool GrpcClient::Put(sdc::Service& service)
     return status.ok();
 }
 
-std::vector<sdc::Service>& GrpcClient::Get(sdc::Service& service)
+std::vector<sdc::Service> GrpcClient::Get(sdc::Service& service)
 {
     std::vector<sdc::Service> vec;
 
@@ -75,4 +75,5 @@ void GrpcClient::Watch(sdc::Service& service)
         etcdserverpb::WatchResponse> > stream(m_watch_stub->Watch(&context));
 
     */
+    service.servicename();
 }

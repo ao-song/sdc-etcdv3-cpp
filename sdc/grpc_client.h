@@ -27,7 +27,7 @@ namespace sdc
 
         // Sync interface
         bool Put(sdc::Service& service) override;
-        std::vector<sdc::Service>& Get(sdc::Service& service) override;
+        std::vector<sdc::Service> Get(sdc::Service& service) override;
         void Watch(sdc::Service& service) override;
 
         // Opt interface
