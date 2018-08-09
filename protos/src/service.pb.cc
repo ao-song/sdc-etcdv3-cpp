@@ -20,11 +20,6 @@
 #endif
 // @@protoc_insertion_point(includes)
 namespace sdc {
-class Service_Property_PropertyEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Service_Property_PropertyEntry_DoNotUse>
-      _instance;
-} _Service_Property_PropertyEntry_DoNotUse_default_instance_;
 class Service_PropertyDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Service_Property>
@@ -37,26 +32,6 @@ class ServiceDefaultTypeInternal {
 } _Service_default_instance_;
 }  // namespace sdc
 namespace protobuf_service_2eproto {
-void InitDefaultsService_Property_PropertyEntry_DoNotUseImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::sdc::_Service_Property_PropertyEntry_DoNotUse_default_instance_;
-    new (ptr) ::sdc::Service_Property_PropertyEntry_DoNotUse();
-  }
-  ::sdc::Service_Property_PropertyEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-void InitDefaultsService_Property_PropertyEntry_DoNotUse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsService_Property_PropertyEntry_DoNotUseImpl);
-}
-
 void InitDefaultsService_PropertyImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -65,7 +40,6 @@ void InitDefaultsService_PropertyImpl() {
 #else
   ::google::protobuf::internal::InitProtobufDefaults();
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_service_2eproto::InitDefaultsService_Property_PropertyEntry_DoNotUse();
   {
     void* ptr = &::sdc::_Service_Property_default_instance_;
     new (ptr) ::sdc::Service_Property();
@@ -101,24 +75,16 @@ void InitDefaultsService() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsServiceImpl);
 }
 
-::google::protobuf::Metadata file_level_metadata[3];
+::google::protobuf::Metadata file_level_metadata[2];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service_Property_PropertyEntry_DoNotUse, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service_Property_PropertyEntry_DoNotUse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service_Property_PropertyEntry_DoNotUse, key_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service_Property_PropertyEntry_DoNotUse, value_),
-  0,
-  1,
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service_Property, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service_Property, property_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service_Property, key_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service_Property, value_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -129,13 +95,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sdc::Service, properties_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 7, sizeof(::sdc::Service_Property_PropertyEntry_DoNotUse)},
-  { 9, -1, sizeof(::sdc::Service_Property)},
-  { 15, -1, sizeof(::sdc::Service)},
+  { 0, -1, sizeof(::sdc::Service_Property)},
+  { 7, -1, sizeof(::sdc::Service)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::sdc::_Service_Property_PropertyEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::sdc::_Service_Property_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::sdc::_Service_default_instance_),
 };
@@ -156,21 +120,20 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 3);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
 }
 
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\rservice.proto\022\003sdc\"\316\001\n\007Service\022\023\n\013Serv"
+      "\n\rservice.proto\022\003sdc\"\202\001\n\007Service\022\023\n\013Serv"
       "iceName\030\001 \001(\t\022\017\n\007Address\030\002 \001(\t\022)\n\nProper"
-      "ties\030\003 \003(\0132\025.sdc.Service.Property\032r\n\010Pro"
-      "perty\0225\n\010Property\030\001 \003(\0132#.sdc.Service.Pr"
-      "operty.PropertyEntry\032/\n\rPropertyEntry\022\013\n"
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001b\006proto3"
+      "ties\030\003 \003(\0132\025.sdc.Service.Property\032&\n\010Pro"
+      "perty\022\013\n\003Key\030\001 \001(\t\022\r\n\005Value\030\002 \001(\tb\006proto"
+      "3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 237);
+      descriptor, 161);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "service.proto", &protobuf_RegisterTypes);
 }
@@ -190,27 +153,11 @@ namespace sdc {
 
 // ===================================================================
 
-Service_Property_PropertyEntry_DoNotUse::Service_Property_PropertyEntry_DoNotUse() {}
-Service_Property_PropertyEntry_DoNotUse::Service_Property_PropertyEntry_DoNotUse(::google::protobuf::Arena* arena) : SuperType(arena) {}
-void Service_Property_PropertyEntry_DoNotUse::MergeFrom(const Service_Property_PropertyEntry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
-::google::protobuf::Metadata Service_Property_PropertyEntry_DoNotUse::GetMetadata() const {
-  ::protobuf_service_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_service_2eproto::file_level_metadata[0];
-}
-void Service_Property_PropertyEntry_DoNotUse::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
-}
-
-
-// ===================================================================
-
 void Service_Property::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Service_Property::kPropertyFieldNumber;
+const int Service_Property::kKeyFieldNumber;
+const int Service_Property::kValueFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Service_Property::Service_Property()
@@ -226,11 +173,20 @@ Service_Property::Service_Property(const Service_Property& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  property_.MergeFrom(from.property_);
+  key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.key().size() > 0) {
+    key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.key_);
+  }
+  value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.value().size() > 0) {
+    value_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.value_);
+  }
   // @@protoc_insertion_point(copy_constructor:sdc.Service.Property)
 }
 
 void Service_Property::SharedCtor() {
+  key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _cached_size_ = 0;
 }
 
@@ -240,6 +196,8 @@ Service_Property::~Service_Property() {
 }
 
 void Service_Property::SharedDtor() {
+  key_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  value_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void Service_Property::SetCachedSize(int size) const {
@@ -271,7 +229,8 @@ void Service_Property::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  property_.Clear();
+  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
@@ -285,27 +244,32 @@ bool Service_Property::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // map<string, string> Property = 1;
+      // string Key = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          Service_Property_PropertyEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
-              Service_Property_PropertyEntry_DoNotUse,
-              ::std::string, ::std::string,
-              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-              0 >,
-            ::google::protobuf::Map< ::std::string, ::std::string > > parser(&property_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_key()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            parser.key().data(), static_cast<int>(parser.key().length()),
+            this->key().data(), static_cast<int>(this->key().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "sdc.Service.Property.PropertyEntry.key"));
+            "sdc.Service.Property.Key"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string Value = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_value()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            parser.value().data(), static_cast<int>(parser.value().length()),
+            this->value().data(), static_cast<int>(this->value().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "sdc.Service.Property.PropertyEntry.value"));
+            "sdc.Service.Property.Value"));
         } else {
           goto handle_unusual;
         }
@@ -338,57 +302,24 @@ void Service_Property::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // map<string, string> Property = 1;
-  if (!this->property().empty()) {
-    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
-        ConstPtr;
-    typedef ConstPtr SortItem;
-    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
-    struct Utf8Check {
-      static void Check(ConstPtr p) {
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          p->first.data(), static_cast<int>(p->first.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "sdc.Service.Property.PropertyEntry.key");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          p->second.data(), static_cast<int>(p->second.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "sdc.Service.Property.PropertyEntry.value");
-      }
-    };
+  // string Key = 1;
+  if (this->key().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->key().data(), static_cast<int>(this->key().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sdc.Service.Property.Key");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->key(), output);
+  }
 
-    if (output->IsSerializationDeterministic() &&
-        this->property().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->property().size()]);
-      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->property().begin();
-          it != this->property().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Service_Property_PropertyEntry_DoNotUse> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(property_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            1, *entry, output);
-        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Service_Property_PropertyEntry_DoNotUse> entry;
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->property().begin();
-          it != this->property().end(); ++it) {
-        entry.reset(property_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            1, *entry, output);
-        Utf8Check::Check(&*it);
-      }
-    }
+  // string Value = 2;
+  if (this->value().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->value().data(), static_cast<int>(this->value().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sdc.Service.Property.Value");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->value(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -405,61 +336,26 @@ void Service_Property::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // map<string, string> Property = 1;
-  if (!this->property().empty()) {
-    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
-        ConstPtr;
-    typedef ConstPtr SortItem;
-    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
-    struct Utf8Check {
-      static void Check(ConstPtr p) {
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          p->first.data(), static_cast<int>(p->first.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "sdc.Service.Property.PropertyEntry.key");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          p->second.data(), static_cast<int>(p->second.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "sdc.Service.Property.PropertyEntry.value");
-      }
-    };
+  // string Key = 1;
+  if (this->key().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->key().data(), static_cast<int>(this->key().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sdc.Service.Property.Key");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->key(), target);
+  }
 
-    if (deterministic &&
-        this->property().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->property().size()]);
-      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->property().begin();
-          it != this->property().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Service_Property_PropertyEntry_DoNotUse> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(property_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       1, *entry, deterministic, target);
-;
-        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Service_Property_PropertyEntry_DoNotUse> entry;
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->property().begin();
-          it != this->property().end(); ++it) {
-        entry.reset(property_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       1, *entry, deterministic, target);
-;
-        Utf8Check::Check(&*it);
-      }
-    }
+  // string Value = 2;
+  if (this->value().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->value().data(), static_cast<int>(this->value().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sdc.Service.Property.Value");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->value(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -479,18 +375,18 @@ size_t Service_Property::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // map<string, string> Property = 1;
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->property_size());
-  {
-    ::google::protobuf::scoped_ptr<Service_Property_PropertyEntry_DoNotUse> entry;
-    for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-        it = this->property().begin();
-        it != this->property().end(); ++it) {
-      entry.reset(property_.NewEntryWrapper(it->first, it->second));
-      total_size += ::google::protobuf::internal::WireFormatLite::
-          MessageSizeNoVirtual(*entry);
-    }
+  // string Key = 1;
+  if (this->key().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->key());
+  }
+
+  // string Value = 2;
+  if (this->value().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->value());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -522,7 +418,14 @@ void Service_Property::MergeFrom(const Service_Property& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  property_.MergeFrom(from.property_);
+  if (from.key().size() > 0) {
+
+    key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.key_);
+  }
+  if (from.value().size() > 0) {
+
+    value_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.value_);
+  }
 }
 
 void Service_Property::CopyFrom(const ::google::protobuf::Message& from) {
@@ -549,7 +452,8 @@ void Service_Property::Swap(Service_Property* other) {
 }
 void Service_Property::InternalSwap(Service_Property* other) {
   using std::swap;
-  property_.Swap(&other->property_);
+  key_.Swap(&other->key_);
+  value_.Swap(&other->value_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }

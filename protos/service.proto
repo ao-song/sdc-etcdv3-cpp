@@ -8,7 +8,8 @@ message Service
     string Address = 2;
     message Property
     {
-        map<string, string> Property = 1;
+        string Key = 1;
+        string Value = 2;
     }
     repeated Property Properties = 3;
 }
