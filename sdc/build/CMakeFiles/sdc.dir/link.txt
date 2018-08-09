@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC  -Wall -Wextra -Werror -mcrc32 -Wno-literal-suffix  -shared -Wl,-soname,libsdc.so -o ../lib/libsdc.so CMakeFiles/sdc.dir/client.o CMakeFiles/sdc.dir/grpc_client.o CMakeFiles/sdc.dir/sdc.o  -L/home/pi/github/sdc-etcdv3-cpp/sdc/../protos/lib -Wl,-rpath,/home/pi/github/sdc-etcdv3-cpp/sdc/../protos/lib -lsdcproto 

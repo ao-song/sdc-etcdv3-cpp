@@ -1,3 +1,0 @@
-/home/pi/github/sdc-etcdv3-cpp/protos/build/CMakeFiles/rebuild_cache.dir
-/home/pi/github/sdc-etcdv3-cpp/protos/build/CMakeFiles/sdcproto.dir
-/home/pi/github/sdc-etcdv3-cpp/protos/build/CMakeFiles/edit_cache.dir

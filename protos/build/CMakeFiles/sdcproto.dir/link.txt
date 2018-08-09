@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC  -Wall -Wextra -Werror -mcrc32 -Wno-literal-suffix  -shared -Wl,-soname,libsdcproto.so -o ../lib/libsdcproto.so CMakeFiles/sdcproto.dir/src/auth.pb.o CMakeFiles/sdcproto.dir/src/kv.pb.o CMakeFiles/sdcproto.dir/src/rpc.grpc.pb.o CMakeFiles/sdcproto.dir/src/rpc.pb.o CMakeFiles/sdcproto.dir/src/service.pb.o -lgrpc -lprotobuf 
