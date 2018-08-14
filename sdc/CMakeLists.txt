@@ -11,4 +11,4 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../protos/lib)
 
 add_library(sdc SHARED ${SDC_SOURCES})
 target_include_directories(sdc PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/..)
-target_link_libraries(sdc LINK_PUBLIC libsdcproto.so)
+target_link_libraries(sdc LINK_PUBLIC sdcproto)
