@@ -2,7 +2,7 @@
 
 using namespace sdc;
 
-#define DEFAULT_GPRC_GATEWAY_ADDRESS "127.0.0.1:23790"
+#define DEFAULT_GPRC_GATEWAY_ADDRESS "127.0.0.1:2379"
 
 int main()
 {
