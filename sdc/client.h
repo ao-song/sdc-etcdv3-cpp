@@ -16,7 +16,7 @@ namespace sdc
         };
 
         virtual bool Put(Service& sv) = 0;
-        virtual std::vector<Service> Get(Service& sv) = 0;
+        virtual std::vector<Service> Get(const std::string& sv) = 0;
         virtual void Watch(Service& sv) = 0;
     };
 }

@@ -34,16 +34,14 @@ bool GrpcClient::Put(sdc::Service& service)
     return status.ok();
 }
 
-std::vector<sdc::Service> GrpcClient::Get(sdc::Service& service)
+std::vector<sdc::Service> GrpcClient::Get(const std::string& service)
 {
     std::vector<sdc::Service> vec;
 
     etcdserverpb::RangeRequest request;
     etcdserverpb::RangeResponse response;
 
-    std::string key = service.servicename();
-
-    request.set_key(key);
+    request.set_key(service);
 
     ClientContext context;
     Status status =

@@ -22,7 +22,7 @@ int main()
     prop->set_value(propvalue);
 
     client.Put(test_service);
-    std::vector<Service> sv = client.Get(test_service);
+    std::vector<Service> sv = client.Get("test");
     std::cout << "Service name is: " << sv[0].servicename() << std::endl;
     std::cout << "Service address is: " << sv[0].address() << std::endl;
     std::cout << "Service property name is: " << sv[0].properties(0).key() << std::endl;
