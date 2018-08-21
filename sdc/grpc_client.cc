@@ -7,12 +7,11 @@ GrpcClient::GrpcClient(std::string addr)
 {
     m_channel = grpc::CreateChannel(addr, grpc::InsecureChannelCredentials());
     m_kv_stub = etcdserverpb::KV::NewStub(m_channel);
-    m_watch_stub = etcdserverpb::Watch::NewStub(m_channel);
 }
 
 GrpcClient::~GrpcClient()
 {
-    // Empty
+    // Empty;
 }
 
 bool GrpcClient::Put(sdc::Service& service)
@@ -58,20 +57,4 @@ std::vector<sdc::Service> GrpcClient::Get(const std::string& service)
     }
 
     return vec;
-}
-
-void GrpcClient::Watch(sdc::Service& service)
-{
-    // sync?
-    /*
-    etcdserverpb::WatchRequest request;
-    etcdserverpb::WatchResponse response;
-    
-    ClientContext context;
-
-    std::unique_ptr<ClientReaderWriter<etcdserverpb::WatchRequest, 
-        etcdserverpb::WatchResponse> > stream(m_watch_stub->Watch(&context));
-
-    */
-    service.servicename();
 }
